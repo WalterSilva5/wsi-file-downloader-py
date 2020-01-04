@@ -68,7 +68,7 @@ border-radius: 5px;</string>
       <x>620</x>
       <y>20</y>
       <width>91</width>
-      <height>31</height>
+      <height>71</height>
      </rect>
     </property>
     <property name="font">
@@ -90,8 +90,8 @@ border-radius: 5px;</string>
    <widget class="QPushButton" name="buttonRemover">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>100</y>
+      <x>10</x>
+      <y>180</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -116,9 +116,9 @@ border-radius: 5px;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>210</y>
+      <y>220</y>
       <width>701</width>
-      <height>311</height>
+      <height>301</height>
      </rect>
     </property>
     <property name="styleSheet">

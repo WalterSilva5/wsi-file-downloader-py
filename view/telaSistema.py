@@ -19,7 +19,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.labelLink = QtWidgets.QLabel(self.centralwidget)
-        self.labelLink.setGeometry(QtCore.QRect(30, 20, 61, 31))
+        self.labelLink.setGeometry(QtCore.QRect(50, 20, 61, 31))
         font = QtGui.QFont()
         font.setPointSize(18)
         font.setBold(True)
@@ -29,7 +29,7 @@ class Ui_MainWindow(object):
 "")
         self.labelLink.setObjectName("labelLink")
         self.entradaLinkDeDownload = QtWidgets.QLineEdit(self.centralwidget)
-        self.entradaLinkDeDownload.setGeometry(QtCore.QRect(110, 20, 501, 31))
+        self.entradaLinkDeDownload.setGeometry(QtCore.QRect(140, 20, 471, 31))
         self.entradaLinkDeDownload.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "color:black;\n"
 "border-radius: 5px;")
@@ -46,7 +46,7 @@ class Ui_MainWindow(object):
 "border-radius: 5px;")
         self.buttonBaixar.setObjectName("buttonBaixar")
         self.buttonRemover = QtWidgets.QPushButton(self.centralwidget)
-        self.buttonRemover.setGeometry(QtCore.QRect(10, 90, 91, 31))
+        self.buttonRemover.setGeometry(QtCore.QRect(20, 100, 111, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(True)
@@ -69,7 +69,7 @@ class Ui_MainWindow(object):
         self.ListarDownloads.setContentsMargins(0, 0, 0, 0)
         self.ListarDownloads.setObjectName("ListarDownloads")
         self.labelLink_2 = QtWidgets.QLabel(self.centralwidget)
-        self.labelLink_2.setGeometry(QtCore.QRect(290, 130, 161, 31))
+        self.labelLink_2.setGeometry(QtCore.QRect(270, 180, 161, 31))
         font = QtGui.QFont()
         font.setPointSize(18)
         font.setBold(True)
@@ -79,11 +79,11 @@ class Ui_MainWindow(object):
 "")
         self.labelLink_2.setObjectName("labelLink_2")
         self.progresso = QtWidgets.QProgressBar(self.centralwidget)
-        self.progresso.setGeometry(QtCore.QRect(260, 170, 481, 31))
+        self.progresso.setGeometry(QtCore.QRect(270, 140, 471, 31))
         self.progresso.setProperty("value", 0)
         self.progresso.setObjectName("progresso")
         self.labelLink_3 = QtWidgets.QLabel(self.centralwidget)
-        self.labelLink_3.setGeometry(QtCore.QRect(10, 170, 241, 31))
+        self.labelLink_3.setGeometry(QtCore.QRect(20, 140, 241, 31))
         font = QtGui.QFont()
         font.setPointSize(18)
         font.setBold(True)
@@ -92,6 +92,23 @@ class Ui_MainWindow(object):
         self.labelLink_3.setStyleSheet("color: rgb(255, 255, 255);\n"
 "")
         self.labelLink_3.setObjectName("labelLink_3")
+        self.buttonSalvarEm = QtWidgets.QPushButton(self.centralwidget)
+        self.buttonSalvarEm.setGeometry(QtCore.QRect(20, 60, 111, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.buttonSalvarEm.setFont(font)
+        self.buttonSalvarEm.setStyleSheet("background-color: rgb(0, 255, 0);\n"
+"color: white;\n"
+"border-radius: 5px;")
+        self.buttonSalvarEm.setObjectName("buttonSalvarEm")
+        self.entradaDestino = QtWidgets.QLineEdit(self.centralwidget)
+        self.entradaDestino.setGeometry(QtCore.QRect(140, 60, 471, 31))
+        self.entradaDestino.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color:black;\n"
+"border-radius: 5px;")
+        self.entradaDestino.setObjectName("entradaDestino")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -105,3 +122,4 @@ class Ui_MainWindow(object):
         self.buttonRemover.setText(_translate("MainWindow", "REMOVER"))
         self.labelLink_2.setText(_translate("MainWindow", "DOWNLOADS"))
         self.labelLink_3.setText(_translate("MainWindow", "PROGRESSO ATUAL"))
+        self.buttonSalvarEm.setText(_translate("MainWindow", "SALVAR EM"))
