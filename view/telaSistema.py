@@ -149,7 +149,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Sertec Video Downloader"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Sertec Music  Downloader"))
         self.labelLink.setText(_translate("MainWindow", "LINK DA MUSICA NO YOUTUBE"))
         self.buttonBaixar.setText(_translate("MainWindow", "BAIXAR"))
         self.buttonAbrirPastaDeDestino.setText(_translate("MainWindow", "ABRIR PASTA DE DESTINO"))
