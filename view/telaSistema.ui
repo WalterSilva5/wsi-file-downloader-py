@@ -26,15 +26,15 @@
    <widget class="QLabel" name="labelLink">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>20</x>
       <y>20</y>
-      <width>61</width>
+      <width>321</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>18</pointsize>
+      <pointsize>10</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -44,15 +44,15 @@
 </string>
     </property>
     <property name="text">
-     <string>LINK</string>
+     <string>LINK DA MUSICA NO YOUTUBE</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="entradaLinkDeDownload">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>230</x>
       <y>20</y>
-      <width>411</width>
+      <width>381</width>
       <height>31</height>
      </rect>
     </property>
@@ -87,12 +87,12 @@ border-radius: 5px;</string>
      <string>BAIXAR</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="buttonRemover">
+   <widget class="QPushButton" name="buttonAbrirPastaDeDestino">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>180</y>
-      <width>111</width>
+      <x>130</x>
+      <y>490</y>
+      <width>241</width>
       <height>31</height>
      </rect>
     </property>
@@ -109,7 +109,7 @@ color: white;
 border-radius: 5px;</string>
     </property>
     <property name="text">
-     <string>REMOVER</string>
+     <string>ABRIR PASTA DE DESTINO</string>
     </property>
    </widget>
    <widget class="QFrame" name="frameListagemDeDownloads">
@@ -118,7 +118,7 @@ border-radius: 5px;</string>
       <x>10</x>
       <y>220</y>
       <width>701</width>
-      <height>301</height>
+      <height>261</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -136,7 +136,7 @@ border-radius: 5px;</string>
        <x>0</x>
        <y>0</y>
        <width>701</width>
-       <height>331</height>
+       <height>261</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="ListarDownloads"/>
@@ -169,9 +169,9 @@ border-radius: 5px;</string>
    <widget class="QProgressBar" name="progresso">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>210</x>
       <y>140</y>
-      <width>471</width>
+      <width>531</width>
       <height>31</height>
      </rect>
     </property>
@@ -179,34 +179,10 @@ border-radius: 5px;</string>
      <number>0</number>
     </property>
    </widget>
-   <widget class="QLabel" name="labelLink_3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>140</y>
-      <width>241</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>18</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
-</string>
-    </property>
-    <property name="text">
-     <string>PROGRESSO ATUAL</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="buttonSalvarEm">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>60</x>
       <y>60</y>
       <width>161</width>
       <height>31</height>
@@ -231,9 +207,9 @@ border-radius: 5px;</string>
    <widget class="QLineEdit" name="entradaDestino">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>230</x>
       <y>60</y>
-      <width>411</width>
+      <width>381</width>
       <height>31</height>
      </rect>
     </property>
@@ -266,6 +242,67 @@ border-radius: 5px;</string>
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="buttonRemover">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>490</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 255, 0);
+color: white;
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string>REMOVER</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelLink_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+</string>
+    </property>
+    <property name="text">
+     <string>PROGRESSO DO DOWNLOAD</string>
+    </property>
+   </widget>
+   <zorder>labelLink</zorder>
+   <zorder>entradaLinkDeDownload</zorder>
+   <zorder>buttonBaixar</zorder>
+   <zorder>buttonAbrirPastaDeDestino</zorder>
+   <zorder>frameListagemDeDownloads</zorder>
+   <zorder>labelLink_2</zorder>
+   <zorder>buttonSalvarEm</zorder>
+   <zorder>entradaDestino</zorder>
+   <zorder>labelErro</zorder>
+   <zorder>buttonRemover</zorder>
+   <zorder>labelLink_4</zorder>
+   <zorder>progresso</zorder>
   </widget>
  </widget>
  <resources/>

@@ -15,6 +15,7 @@ class ControllerTelaSistema(QMainWindow):
 
         self.tela.buttonBaixar.clicked.connect(self.prepararDownload)
         self.tela.buttonSalvarEm.clicked.connect(self.selecionarDestino)
+        self.tela.buttonAbrirPastaDeDestino.clicked.connect(self.abrirDestino)
 
         threading.Thread(target = self.definirBotoes).start()
 
@@ -31,14 +32,23 @@ class ControllerTelaSistema(QMainWindow):
 
     def baixar(self):
         self.link = self.tela.entradaLinkDeDownload.text()
-        self.musica = YouTube(self.link)
-        video_type = self.musica.streams.filter(only_audio = True).first()
-        self.MaxfileSize = video_type.filesize
-        threading.Thread(self.musica.register_on_progress_callback(self.show_progress_bar)).start()
-        threading.Thread(target=self.DownloadFile).start()
+        try:
+            self.musica = YouTube(self.link)
+        except:
+            self.tela.labelErro.setText("OCORREU UM ERRO!")
+        else:
+            video_type = self.musica.streams.filter(only_audio = True).first()
+            self.MaxfileSize = video_type.filesize
+            threading.Thread(self.musica.register_on_progress_callback(self.show_progress_bar)).start()
+            threading.Thread(target=self.DownloadFile).start()
 
     def DownloadFile(self):
         self.musica.streams.filter(only_audio=True).first().download(self.folderLocation)        
 
     def show_progress_bar(self, stream=None, chunk=None, file_handle=None, bytes_remaining=None):
         self.tela.progresso.setValue(int(100 - (100*(bytes_remaining/self.MaxfileSize))))
+
+    def abrirDestino(self):
+        path = self.tela.entradaDestino.text()
+        path = os.path.realpath(path)
+        os.startfile(path)
