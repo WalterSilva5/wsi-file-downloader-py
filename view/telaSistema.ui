@@ -130,6 +130,21 @@ border-radius: 5px;</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QListWidget" name="listagemDeDownloads">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>711</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;
+font-size: 17px;
+font-weight: bold;</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QLabel" name="labelLink_2">
     <property name="geometry">

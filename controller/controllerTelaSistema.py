@@ -1,10 +1,8 @@
 from __future__ import unicode_literals
-from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog
+from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QLabel
 from view.telaSistema import  Ui_MainWindow
-import random, threading, time
+import random, threading, time, getpass
 from pytube import YouTube
-import threading
-import getpass
 
 class ControllerTelaSistema(QMainWindow):
     def __init__(self, model):
@@ -23,6 +21,7 @@ class ControllerTelaSistema(QMainWindow):
         self.folderLocation = "C:/Users/{}/Music/".format(getpass.getuser())
         self.tela.entradaDestino.setText(self.folderLocation)
     def prepararDownload(self):
+        self.tela.progresso.setValue(0)
         self.baixar()
     def selecionarDestino(self):
         self.destino = str(QFileDialog.getExistingDirectory(self, "ESCOLHA UM DIRETORIO"))
@@ -37,8 +36,8 @@ class ControllerTelaSistema(QMainWindow):
         except:
             self.tela.labelErro.setText("OCORREU UM ERRO!")
         else:
-            video_type = self.musica.streams.filter(only_audio = True).first()
-            self.MaxfileSize = video_type.filesize
+            self.video_type = self.musica.streams.filter(only_audio = True).first()
+            self.MaxfileSize = self.video_type.filesize
             threading.Thread(self.musica.register_on_progress_callback(self.show_progress_bar)).start()
             threading.Thread(target=self.DownloadFile).start()
 
@@ -47,8 +46,19 @@ class ControllerTelaSistema(QMainWindow):
 
     def show_progress_bar(self, stream=None, chunk=None, file_handle=None, bytes_remaining=None):
         self.tela.progresso.setValue(int(100 - (100*(bytes_remaining/self.MaxfileSize))))
+        if (int(100 - (100*(bytes_remaining/self.MaxfileSize)))) == 100:
+            threading.Thread(self.adicionarAosFinalizados()).start()
 
+    def adicionarAosFinalizados(self):
+        """nessa função vou adicionar os downloads finalizados a listagem da tela"""
+
+        self.tela.listagemDeDownloads.addItem(self.musica.title)
+        self.tela.labelErro.setText("")
+        self.tela.entradaLinkDeDownload.setText("")
+        self.tela.progresso.setValue(0)
+        
     def abrirDestino(self):
+        """abre a atual pasta de destido das musicas baixadas"""
         path = self.tela.entradaDestino.text()
         path = os.path.realpath(path)
         os.startfile(path)
