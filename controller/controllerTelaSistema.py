@@ -1,8 +1,10 @@
 from __future__ import unicode_literals
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QLabel
-from view.telaSistema import  Ui_MainWindow
+from view.telaSistema import Ui_MainWindow
 import random, threading, time, getpass
 from pytube import YouTube
+import os
+
 
 class ControllerTelaSistema(QMainWindow):
     def __init__(self, model):
