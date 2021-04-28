@@ -6,4 +6,6 @@
     pip install -r requirements.txt
 
 3 - no terminal digite o comando para executar a aplicação:
-    python main.py
+    python main.pyi
+
+![IMAGEM](https://raw.githubusercontent.com/WalterSilva5/youtubeMusicDownloader/master/sistema.jpg)
