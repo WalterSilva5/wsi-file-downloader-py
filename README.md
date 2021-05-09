@@ -1,11 +1,25 @@
-<strong>ESSE PROGRAMA SO FUNCIONARA EM SISTEMAS WINDOWS!!</strong>
+<strong>ESTE PROGRAMA SÓ FUNCIONA EM SISTEMAS WINDOWS!!</strong>
 
-1 - antes de tudo é necessario ter o python instalado para poder executar a aplicação.
-
-2 - com o python ja instalado digite o seguinte comando no terminal na pasta da aplicação:
+<pre>
+<h4>antes de tudo é necessario ter o python instalado para poder executar a aplicação.</h4>
     pip install -r requirements.txt
 
-3 - no terminal digite o comando para executar a aplicação:
+<h4>requirements:</h4>
+    astroid==2.3.3
+    colorama==0.4.3
+    isort==4.3.21
+    lazy-object-proxy==1.4.3
+    mccabe==0.6.1
+    pylint==2.4.4
+    PyQt5==5.14.1
+    PyQt5-sip==12.7.0
+    pytube==9.5.3
+    six==1.13.0
+    typed-ast==1.4.0
+    wrapt==1.11.2
+
+<h4>no terminal digite o comando para executar a aplicação:</h4>
     python main.py
+</pre>
 
 ![IMAGEM](https://raw.githubusercontent.com/WalterSilva5/youtubeMusicDownloader/master/sistema.jpg)
