@@ -21,7 +21,7 @@ execute no terminal o comando:
     typed-ast==1.4.0
     wrapt==1.11.2
 
-<h4>no terminal digite o comando para executar a aplicação:</h4>
+<h4>No terminal digite o comando para executar a aplicação:</h4>
     python main.py
 </pre>
 
