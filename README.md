@@ -1,7 +1,10 @@
 <strong>ESTE PROGRAMA SÓ FUNCIONA EM SISTEMAS WINDOWS!!</strong>
 
 <pre>
-<h4>antes de tudo é necessario ter o python instalado para poder executar a aplicação.</h4>
+<h4>Antes de tudo é necessario ter o python instalado para poder executar a aplicação.</h4>
+    você pode obte-lo em: <a href="https://www.python.org/downloads/release/python-376/">DOWNLOAD DO PYTHON</a>
+<h4>Caso ja tenha o python instalado, instale as bibliotecas necessarias</h4>
+execute no terminal o comando:
     pip install -r requirements.txt
 
 <h4>requirements:</h4>
