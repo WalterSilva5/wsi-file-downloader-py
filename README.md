@@ -1,10 +1,9 @@
-<strong>ESTE PROGRAMA SÓ FUNCIONA EM SISTEMAS WINDOWS!!</strong>
+<strong>WSI file downlaoder</strong>
 
 <pre>
-<h4>Antes de tudo é necessario ter o python instalado para poder executar a aplicação.</h4>
-    você pode obte-lo em: <a href="https://www.python.org/downloads/release/python-376/">DOWNLOAD DO PYTHON</a>
-<h4>Caso ja tenha o python instalado, instale as bibliotecas necessarias</h4>
-execute no terminal o comando:
+<h4>First of all, you need to have Python installed to run the application.</h4>
+    you can get it at: <a href="https://www.python.org/downloads/release/python-376/">DOWNLOAD DO PYTHON</a>
+<h4>If you already have Python installed, install the necessary libraries:
     pip install -r requirements.txt
 
 <h4>requirements:</h4>
@@ -21,7 +20,7 @@ execute no terminal o comando:
     typed-ast==1.4.0
     wrapt==1.11.2
 
-<h4>No terminal digite o comando para executar a aplicação:</h4>
+<h4>In the terminal, type the command to run the application::</h4>
     python main.py
 </pre>
 
